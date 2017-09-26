@@ -1,8 +1,9 @@
 #include <iostream>
 #include <forward_list>
 
+
 /*
-Sobrecarga de funciones
++-+ Sobrecarga de funciones
 
 	int test(){}
 	int test(int a){}
@@ -34,7 +35,7 @@ Overloaded function--> familia de funciones con el mismo nombre que tienen firma
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-Function Template
++-+ Function Template
 
     - Familia de funciones con una unica funcion, pero que acepta argumentos diferentes PLANTILLA
 	- Podre usar esto con cualquier tipo? Mientras la funcion permita a esa variable la funcion definida, como por ejemplo el =, o el <, si podras
@@ -66,11 +67,18 @@ Ejemplo:
 
 ===================================
 
+	template <typename...> le puedes pasar tantos argumentos como quieras
+	
+	Argumentos por defecto //mirate esto en casa que el jueves lo pone seguro
+	va con las cosas del allocator como obviando el segundo valor probablemente lo pregunte u better look at it
+	
+	-un ejercicio con funcion overloaded y pasarlo a template
+	-montar una class template con especificaciones dadas 
+
 
 */
 
 
-template <typename T>;
 
 
 void main() {
