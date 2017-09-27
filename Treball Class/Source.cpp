@@ -1,5 +1,6 @@
 #include <iostream>
 #include <forward_list>
+#include <vector>
 
 
 /*
@@ -75,13 +76,60 @@ Ejemplo:
 	-un ejercicio con funcion overloaded y pasarlo a template
 	-montar una class template con especificaciones dadas 
 
+Ejeplo de como pase de una funcion overloaded a template
+===========================================
+template<typename T>
 
-*/
-
-
-
+T calculo(T a, T b) {
+	return a + b;
+}
 
 void main() {
-	std::forward_list<int> p1;
-	std::cout << p1.max_size() << std::endl;
+	double num1 = 1.9677261;
+	double num2 = 3.448361;
+
+	std::cout<< calculo (num1, num2);
 }
+===========================================
+
+Ejeplo con multiples template: 
+===========================================
+template<typename t, typename b, typename w>
+
+t calcula(t a, b c, w h) {
+	return (a + c)/h;
+}
+
+void main() {
+	float a = 67.918;
+	int b = 7;
+	int h = 8;
+	std::cout << calcula(a, b, h);
+}
+===========================================
+Ejemplo con vectores:
+
+===========================================
+template<typename T, typename A>
+
+std::vector<T, A> Counteameesto(std::vector<T, A> a, std::vector<T, A> b) {
+	std::vector <T, A> aux;
+	for (int i = 0; i < b.size() || i < a.size(); i++){
+		aux.push_back(a[i] + b[i]);
+	}
+	return aux;
+}
+
+void main() {
+	std::vector<double> b({1.6,2.2,3.5,4.7,5.1,6.5,7.1,8.1,9.67,10.9});
+	std::vector<double> a({1,2,3,4,5,6,7,8,9,10 });
+	std::vector<double> aux;
+	aux = Counteameesto(b, a);
+
+	for (int i = 0; i < aux.size(); i++){
+		std::cout << aux[i] << std::endl;
+	}
+}
+=========================================
+}*/
+
